@@ -2,8 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-from .forms import LoginForm
-
 def home(request):
     return render(request, 'resume.html')
 
@@ -21,6 +19,10 @@ def projects(request, project_name):
 
     return HttpResponse(f"<h2> {project_name} <h2>" + project_choice)
 
+def clockProject(request):
+    return render(request, 'ClockProject.html')
+
+"""
 def form_view(request):
     form = LoginForm()
     if request.method == 'POST':
@@ -32,3 +34,4 @@ def form_view(request):
     context = {'form': form}
     return render(request, 'home.html', context)
 
+"""

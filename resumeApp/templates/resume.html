@@ -1,98 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Back-end Developer Resume</title>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-}
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-h1 {
-    color: #333;
-}
-p {
-    line-height: 1.6;
-    font-size: larger;
-    color: #666;
-}
-section {
-    background-color: rgb(133, 174, 161);
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-li {
-    margin-bottom: 5px;
-}
-.contact-info {
-    background-color: rgb(216, 209, 209);
-    color: rgb(0, 0, 0);
-    padding: 15px;
-    border-radius: 5px;
-}
-.contact-info p {
-    margin: 5px 0;
-}
-.contact-info p span {
-    font-weight: bold;
-}
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Daniel Roth</h1>
-            <p>Back-end Developer</p>
-        </header>
-        <section>
-            <h2>About Me</h2>
-            <p>I am a skilled back-end developer with expertise in various programming languages and technologies. I have a passion for building efficient and scalable web applications.</p>
-        </section>
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming Languages: Java, Python</li>
-                <li>Web Frameworks: Django, Flask</li>
-                <li>Database Management: MySQL, PostgreSQL, MongoDB</li>
-                <li>Version Control: Git, SVN</li>
-                <li>RESTful APIs</li>
-                <li>Unit Testing</li>
-            </ul>
-        </section>
-        <section class="contact-info">
-            <h3>Contact Information</h3>
-            <p><span>Email:</span> Danielcharlesroth@gmail.com</p>
-            <p><span>Phone:</span> +1858-395-3373</p>
-            <p><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></p>
-            <p><span>GitHub:</span> <a href="https://github.com/johndoe" target="_blank">github.com/johndoe</a></p>
-        </section>
+
+{% extends 'base.html' %}
+
+{% block title %}Home - Back-end Developer Resume{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        <p>I am a proficient back-end developer with extensive experience across multiple programming languages and technologies. My expertise lies in crafting robust web applications and designing engaging video games. Outside of work, I pursue interests in hiking, surfing, and freediving. Originally from San Diego, California, I graduated from the University of Hawai'i.</p>
+        
+        <p>My journey into programming began during my sophomore year in college, driven by a passion for developing desktop games for personal enjoyment and sharing with peers. Subsequently, I pursued elective courses in computer science, which not only sharpened my programming skills but also revealed my aptitude and potential in this field.</p>
+        
+        <p>I am committed to advancing my career in software development, eager to apply my skills and interests in a professional environment. My goal is to contribute meaningfully to innovative projects while continuing to evolve and refine my capabilities.</p>
+        
+        </p>
+    
+</section>
+<div class="about-me-images">
+    <img src="{% static 'images/DanielSuit.jpg' %}" alt="Daniel Roth">
     </div>
-</body>
-</html>
+
+<section>
+    <h2>Hard Skills</h2>
+    <ul>
+        <li>Programming Languages: Java, Python</li>
+        <li>Web Frameworks: Django, Flask</li>
+        <li>Database Management: MySQL, PostgreSQL, MongoDB</li>
+        <li>Version Control: Git, SVN</li>
+        <li>RESTful APIs</li>
+        <li>Unit Testing</li>
+    </ul>
+</section>
+<section>
+    <h2>Soft Skills</h2>
+    <ul>
+        <li>Communication</li>
+        <li>Problem-Solving</li>
+        <li>Critical Thinking</li>
+        <li>Empathy and Emotional Intelligence</li>
+        <li>Adaptability</li>
+        <li>Teamwork and Collaboration</li>
+        <li>Organization</li>
+        <li>Time Management </li>
+        <li>Attention to Detail</li>
+        <li>Leadership</li>
+        <li>Mentorship</li>
+        <li>Resilience and Stress Management</li>
+    </ul>
+</section>
+
+<section class="certs">
+<div class="certificate">
+    <img src="{% static 'images/DatabasesCertificate.jpg' %}" alt="Database Cerificate">
+    
+</div>
+</section>
+
+<section class="certs">
+<div class="certificate2">
+    <img src="{% static 'images/pythonmetacert.jpg' %}" alt="Database Cerificate">
+</div>
+</section>
+
+<section class="certs">
+<div class="certificate3">
+    <img src="{% static 'images/metacert1.jpg' %}" alt="Database Cerificate">
+</div>
+</section>
+
+<section class="contact-info">
+    <h3>Contact Information</h3>
+    <p><span>Email:</span> Danielcharlesroth@gmail.com</p>
+    <p><span>Phone:</span> +1858-395-3373</p>
+    <p><span>LinkedIn:</span> <a class="linkedin" href="https://www.linkedin.com/in/daniel-roth-945856239/" target="_blank">https://www.linkedin.com/in/daniel-roth-945856239/</a></p>
+    <p><span>GitHub:</span> <a class="linkedin" href="https://github.com/Dcroth99" target="_blank">https://github.com/Dcroth99</a></p>
+</section>
+{% endblock %}
