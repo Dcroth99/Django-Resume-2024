@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Back-end Developer Resume{% endblock %}
+
+{% block content %}
+
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<section>
+    <h1>Tile Game</h1>
+    <h3>Link to the Game HERE: <a href="https://50-50.itch.io/tile-game"><h3>--------LINK-------</h3></a> </h3>
+    
+    <p> Welcome to 50-50 Games, a thrilling adventure that tests your agility, quick thinking, and decision-making skills. Imagine navigating through a vibrant, dynamic maze where every turn could lead you closer to victory or further into the labyrinth.</p>
+        
+       <h2> Game Overview</h2>
+        <p>In Tile Game Games, you control a whimsical character who must traverse intricate paths, avoid obstacles, and reach the finish line in the shortest possible time. The game blends classic maze-solving challenges with engaging, modern gameplay mechanics, ensuring that each playthrough is unique and exciting.</p>
+        
+        Key Features
+        <h2> Key Features </h2>
+        <h3>Vivid Visuals:</h3>
+       <p> The game features a colorful and captivating environment with detailed graphics. From the blue skies and gray pavements to the character's quirky cowboy hat, every visual element is designed to enhance your gaming experience.</p>
+        
+       <h3>Immersive Audio:</h3> <p>With a soundtrack that keeps you energized and sound effects that make every jump and movement feel real, the audio elements of 50-50 Games pull you deeper into the adventure.</p>
+        
+       <h3>Intuitive Controls:</h3> <p>The game's controls are simple yet responsive. Using the arrow keys, you can navigate your character through the maze, making sharp turns and strategic moves to outsmart the labyrinth.</p>
+        
+       <h3>Dynamic Character:</h3> <p>Your character isn't just a static figure. They blink, jump, and even make sounds as they move, adding a layer of realism and personality to your gameplay.</p>
+        
+       <h3>Challenging Mazes:</h3> <p>With multiple paths to explore, each maze presents a new challenge. The game includes a variety of mazes with increasing complexity, ensuring that you are constantly engaged and tested.</p>
+        
+       <h3>Real-time Feedback:</h3> <p>A timer tracks your progress, encouraging you to beat your best time and adding a competitive edge to the game. Can you set a new record?</p>
+        
+       <h2>Gameplay</h2>
+        <p>As you dive into Tile Game, you'll find yourself in a vibrant game window, with a clear objective: navigate through the maze to reach the endpoint. The game begins with a catchy title screen, drawing you into the fun and adventurous spirit of the game.</p>
+        
+        <h2>Your journey is filled with exciting moments!!:</h2>
+        
+        <h3>Movement:</h3> <p>With each press of the arrow keys, your character dashes forward, and the accompanying jump sound adds to the thrill of the move.</p>
+        <h3> Obstacles:</h3> <p>Navigate carefully to avoid dead ends and find the best path to the finish line.</p>
+        <h3>Timing:</h3> <p>Every second counts. The in-game timer keeps track of your performance, pushing you to improve with each attempt.</p>
+        <h3>Conclusion</h3>
+        <p> Tile Game is more than just a maze game; its an immersive adventure that combines engaging visuals, dynamic gameplay, and challenging puzzles. Whether you're a casual gamer looking for a fun distraction or a hardcore player aiming for the best times, Tile Game offers something for everyone. Dive in and experience the excitement of this unique maze adventure!</p>
+        
+        <p>Explore the game, challenge yourself, and see if you have what it takes to conquer the maze in Tile Game!</p>
+    <div class="certs">
+
+        <div class="pygame">
+            <img src="{% static 'images/finalTitle.jpg' %}" alt="pygame">
+            <img src="{% static 'images/HTPtile.jpg' %}" alt="pygame">
+        </div>
+    
+    </div>
+    <section class="certs">
+        <div class="pygame">
+            <img src="{% static 'images/LEVEL3.jpg' %}" alt="pygame">
+            <img src="{% static 'images/LEVEL1.jpg' %}" alt="pygame">
+        </div>
+    </section>
+</section>
+<section>
+    <h1>Level Function Description</h1>
+<p>The level function in Tile Game is a critical component that dynamically generates each maze, ensuring a unique and challenging experience every time you play. Here's an in-depth look at how it works from a programming perspective:</p>
+
+<h2>Level Function Overview</h2>
+
+<p>The level function is designed to create and manage the game's maze structures. It involves several key processes:</p>
+
+<h3>Grid Initialization:</h3> <p>The function starts by initializing a grid that represents the maze layout. Each cell in the grid can be a pathway or a wall, and the size of the grid can vary to adjust the difficulty of the level.</p>
+
+<h3>Maze Generation Algorithm:</h3> <p>A maze generation algorithm, such as Depth-First Search (DFS) or Prim's Algorithm, is employed to carve out a solvable maze.</p> 
+
+<h3>This involves:</h3>
+<ul>
+<li>from a random point in the grid.</li>
+<li>Creating paths by visiting neighboring cells and marking them as part of the maze.</li> 
+<li>Ensuring that there is always a path from the start to the finish.</li>
+<li>Randomized Obstacles and Power-Ups: To enhance gameplay, the function randomly places obstacles and power-ups within the maze. These elements are strategically positioned to provide challenges and rewards, making each level exciting and unpredictable.</li>
+</ul>
+<h3>Level Difficulty Scaling:</h3> 
+<p>As the player progresses, the level function adjusts the complexity of the mazes by:</p>
+<ul>
+<li>Increasing the grid size.</li>
+<li>Adding more obstacles.</li>
+<li>Decreasing the frequency of power-ups.</li>
+<li>Start and End Points: The function ensures that each maze has clearly defined start and end points. These are placed at opposite ends of the grid to maximize the maze's navigational complexity.</li>
+</ul>
+<h3>Optimization and Testing:</h3> 
+<p>The generated mazes undergo optimization to remove any dead ends or unsolvable paths. Automated testing routines ensure that every maze is both challenging and fair.</p>
+    <section class="certs">
+        <div class="certificated">
+            <img src="{% static 'images/levelfunction1tilegame.jpg' %}" alt="pygame">
+        </div>
+    </section>
+    <section class="certs">
+        <div class="certificated">
+            <img src="{% static 'images/levelfunction2tilegame.jpg' %}" alt="pygame">
+        </div>
+    </section>
+    <section class="certs">
+        <div class="certificated">
+            <img src="{% static 'images/pathcords_tilegame.jpg' %}" alt="pygame">
+        </div>
+    </section> 
+</section>
+{% endblock %}

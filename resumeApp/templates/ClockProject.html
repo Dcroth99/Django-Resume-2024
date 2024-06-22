@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="static/css/clock.css">
 
 </head>
+{% extends 'base.html' %}
+
+{% block title %}Home - Back-end Developer Resume{% endblock %}
+
+{% block content %}
+{% load static %}
+<section>
 <header>
     <h1>Digital Clock</h1>
 </header>
@@ -20,4 +27,6 @@
 
     <script src="static/js/clock.js"></script>
 </body>
+</section>
 </html>
+{% endblock %}

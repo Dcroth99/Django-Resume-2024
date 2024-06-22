@@ -11,7 +11,6 @@ def projects(request, project_name):
 
         'calculator': 'this is a calculator', 
         'color_changer': 'this is a color changer', 
-        'quote_generator': 'this is a quote generator',
         
     }
 
@@ -22,16 +21,8 @@ def projects(request, project_name):
 def clockProject(request):
     return render(request, 'ClockProject.html')
 
-"""
-def form_view(request):
-    form = LoginForm()
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
-        if form.is_valid():
+def tilegame(request):
+    return render(request, 'tile_game.html')
 
-            form.save()
-            
-    context = {'form': form}
-    return render(request, 'home.html', context)
-
-"""
+def certificates(request):
+    return render(request, 'certificates.html')
