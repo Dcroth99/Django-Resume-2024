@@ -41,7 +41,7 @@ body {
 header {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background: linear-gradient(135deg, #1e3c72 0%, #426db7 100%);
     border-radius: 12px;
     max-width: 800px;
     margin: 30px auto;
@@ -61,7 +61,7 @@ header::before {
     width: 200%;
     height: 200%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
-    animation: rotate 12s linear infinite;
+    animation: rotate 25s linear infinite;
 }
 
 header h1 {
