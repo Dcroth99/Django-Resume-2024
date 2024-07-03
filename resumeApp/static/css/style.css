@@ -21,7 +21,6 @@ body {
     background: linear-gradient(270deg, #444444, #2e2b29, #000000);
     background-size: 600% 600%;
     animation: gradientAnimation 25s ease infinite;
-    display: flex;
 }
 
 /* Container styling */
