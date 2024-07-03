@@ -136,7 +136,7 @@ section p {
 .sidebar {
     position: fixed; /* Make the sidebar fixed to the top left */
     top: 20px;
-    left: 20px;
+    right: 20px;
     width: 160px; /* Set a narrower width for the sidebar */
     padding: 20px;
     background: linear-gradient(145deg, rgba(42, 42, 42, 1) 0%, rgba(60, 60, 60, 1) 100%);
