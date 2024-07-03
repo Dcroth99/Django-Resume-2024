@@ -36,19 +36,55 @@ body {
     margin-bottom: 40px;
     
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 /* Header styling */
 header {
     text-align: center;
-    padding: 20px;
-    background: linear-gradient(90deg, rgba(4, 85, 88, 1) 0%, rgba(2, 110, 114, 1) 100%);
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 20px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(48, 75, 76, 1) 0%, rgba(2, 110, 114, 1) 100%);
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 30px auto;
     border: none;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    animation: rotate 6s linear infinite;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header h3 {
+    margin: 10px 0 0;
+    font-weight: 400;
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 h1 {
