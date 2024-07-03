@@ -350,3 +350,8 @@ footer {
     margin: 0 auto;
     border: 1px solid #90a5ba;
 }
+
+.section, 
+.projectsection {
+    max-height: 500px;
+}

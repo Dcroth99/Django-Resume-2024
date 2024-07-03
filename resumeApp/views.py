@@ -5,6 +5,8 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'resume.html')
 
+
+
 def projects(request, project_name):
 
     projects = {
@@ -26,3 +28,6 @@ def tilegame(request):
 
 def certificates(request):
     return render(request, 'certificates.html')
+
+def waves(request):
+    return render(request, 'wavesocial.html')
