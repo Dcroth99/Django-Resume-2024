@@ -391,7 +391,13 @@ footer {
 
 
 
-
+.certshome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between the two images */
+    margin: 40px 0;
+}
 
 .certificate-container {
     position: relative;
