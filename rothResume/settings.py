@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-$prbo7u*9#k-5o@bpqk(3s4e5=vg%m0i4##mhch%t_7pqzbws9"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['drothresumeapp.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -106,7 +106,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'resumeApp/static',
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'static'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
