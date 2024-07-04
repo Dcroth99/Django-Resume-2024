@@ -38,8 +38,8 @@ body {
 }
 
 .container1 {
-    max-width: 1200px;
-    width: 1000px;
+    max-width: 1400px; /* Increase the maximum width */
+    width: 90%; /* Use a percentage for responsiveness */
     margin: 0 auto;
     padding: 20px;
     background-color: rgb(42, 42, 42);
@@ -49,13 +49,17 @@ body {
     margin-bottom: 40px;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 2s ease-out, transform 2s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    display: none; /* Initially hide all sections */
+    font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font */
 }
 
 .container1.visible {
     opacity: 1;
     transform: translateY(0);
+    display: block; /* Show the section when it becomes visible */
 }
+
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 /* Header styling */
@@ -247,24 +251,25 @@ li {
 }
 
 /* Contact info styling */
-.contact-info {
-    background-color: rgb(4, 85, 88);
-    color: rgb(0, 0, 0);
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
 .contact-info p {
-    margin: 5px 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(189, 185, 185);
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.contact-info p span {
-    font-weight: bold;
+.contact-info a {
+    color: #90caf9;
+    text-decoration: none;
 }
 
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 /* Anchor link styling */
 a {
     color: #9d9fa3;
@@ -361,14 +366,12 @@ footer {
 }
 
 .about-me-image2 {
-    width: 450px; /* Adjust the size as needed */
-    height: 720px;
+    max-width: 250px; /* Adjust the size as needed */
     border-radius: 10px; /* Optional: for rounded corners */
 }
 
 .about-me-text {
     flex: 1; /* Take the remaining space */
-    margin-top: 0; /* Remove margin if any */
 }
 
 .about-me-text p {
@@ -376,6 +379,7 @@ footer {
     line-height: 1.6;
     text-align: justify; /* Justify the text for a cleaner look */
 }
+
 
 /* Headshot image styling */
 .headshot {
@@ -446,18 +450,25 @@ footer {
 }
 
 
-.certshome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px; /* Space between the two images */
-    margin: 40px 0;
-}
 
 .certificate-container {
-    position: relative;
-    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
+
+.certificate-container h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.certshome {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Adjust to wrap the content for smaller screens */
+}
+
 
 .title {
     position: absolute;
