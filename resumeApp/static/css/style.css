@@ -45,11 +45,11 @@ body {
     background-color: rgb(42, 42, 42);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 60px; /* Increase top margin for more space */
-    margin-bottom: 60px; /* Increase bottom margin for more space */
+    margin-top: 150px; /* Increase top margin for more space */
+    margin-bottom: 150px; /* Increase bottom margin for more space */
     opacity: 0; /* Initially hidden */
     transform: translateY(50px); /* Initial position */
-    transition: opacity 2.2s ease-out, transform 2.2s ease-out; /* Smooth transition */
+    transition: opacity 2.5s ease-out, transform 2.5s ease-out; /* Smooth transition */
     display: block; /* Ensure display is set to block */
     font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font */
 }
