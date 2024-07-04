@@ -469,16 +469,11 @@ footer {
 }
 
 
-.title {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 1.2em;
+.certificate-container h3 {
+    font-size: 24px; /* Set the font size for the titles */
+    margin-bottom: 10px; /* Add space below the titles */
+    color: #ffffff; /* Set the text color */
+    text-align: center; /* Center align the text */
 }
 
 .certificate-container img {
