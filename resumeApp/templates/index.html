@@ -5,7 +5,7 @@
 
 {% block content %}
 {% load static %}
-<section class="container">
+<section class="container1">
 <section>
     <h2>About Me</h2>
     <p>
@@ -19,7 +19,7 @@
     
 </section>
 </section>
-<section class="container">
+<section class="container1">
 <section>
     <h2>Hard Skills</h2>
     <ul>
@@ -42,7 +42,7 @@
     </ul>
 </section>
 </section>
-<section class="container">
+<section class="container1">
 <section>
     <h2>Soft Skills</h2>
     <ul>
@@ -62,7 +62,7 @@
 </section>
 </section>
 
-<section class="container">
+<section class="container1">
     <h1>Projects:</h1>
     <section class="certshome">
         <div class="certificate-container">
@@ -82,7 +82,7 @@
 
 
 </section>
-
+<section class="container1">
 <section class="contact-info">
     <h3>Contact Information</h3>
     <p><span>Email:</span> Danielcharlesroth@gmail.com</p>
@@ -90,5 +90,29 @@
     <p><span>LinkedIn:</span> <a class="linkedin" href="https://www.linkedin.com/in/daniel-roth-945856239/" target="_blank">https://www.linkedin.com/in/daniel-roth-945856239/</a></p>
     <p><span>GitHub:</span> <a class="linkedin" href="https://github.com/Dcroth99" target="_blank">https://github.com/Dcroth99</a></p>
 </section>
-
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('.container1');
+    
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+    
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+    
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+    </script>
 {% endblock %}
