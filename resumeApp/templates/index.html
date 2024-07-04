@@ -5,8 +5,7 @@
 
 {% block content %}
 {% load static %}
-<div class="scroll-container">
-    <section class="container1 visible"> <!-- Ensure the first section is visible initially -->
+    <section class="container1"> <!-- Ensure the first section is visible initially -->
         <section>
             <h2>About Me</h2>
             <p>I am a proficient Full-Stack Developer with extensive experience across multiple programming languages and technologies. My expertise lies in crafting robust web applications. Outside of work, I enjoy surfing and hiking. Originally from San Diego, California, I graduated from the University of Hawai'i.</p>
@@ -83,28 +82,22 @@
             <p><span>GitHub:</span> <a class="linkedin" href="https://github.com/Dcroth99" target="_blank">https://github.com/Dcroth99</a></p>
         </section>
     </section>
-</div>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const sections = document.querySelectorAll('.container1');
-        let currentSectionIndex = 0;
-        let isScrolling = false;
-    
-        sections[currentSectionIndex].classList.add('visible');
     
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.5 // Adjusted to 50% visibility
+            threshold: 0.1 // Adjusted to 10% visibility
         };
     
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                } else {
-                    entry.target.classList.remove('visible');
                 }
             });
         }, observerOptions);
@@ -112,35 +105,9 @@
         sections.forEach(section => {
             observer.observe(section);
         });
-    
-        const scrollHandler = (event) => {
-            if (isScrolling) return;
-            isScrolling = true;
-    
-            setTimeout(() => {
-                isScrolling = false;
-            }, 600); // Duration must match the CSS transition duration
-    
-            if (event.deltaY > 0) {
-                // Scroll down
-                if (currentSectionIndex < sections.length - 1) {
-                    sections[currentSectionIndex].classList.remove('visible');
-                    currentSectionIndex++;
-                    sections[currentSectionIndex].classList.add('visible');
-                }
-            } else {
-                // Scroll up
-                if (currentSectionIndex > 0) {
-                    sections[currentSectionIndex].classList.remove('visible');
-                    currentSectionIndex--;
-                    sections[currentSectionIndex].classList.add('visible');
-                }
-            }
-        };
-    
-        document.addEventListener('wheel', scrollHandler);
     });
     </script>
+    
     
     
 {% endblock %}
