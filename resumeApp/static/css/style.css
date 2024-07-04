@@ -45,17 +45,18 @@ body {
     background-color: rgb(42, 42, 42);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-    margin-bottom: 40px;
-    opacity: 1; /* Ensure opacity is set to 1 */
-    transform: translateY(0); /* Ensure transform is set to 0 */
+    margin-top: 60px; /* Increase top margin for more space */
+    margin-bottom: 60px; /* Increase bottom margin for more space */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Initial position */
+    transition: opacity 2.2s ease-out, transform 2.2s ease-out; /* Smooth transition */
     display: block; /* Ensure display is set to block */
     font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font */
 }
 
 .container1.visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Move to final position */
     display: block; /* Show the section when it becomes visible */
 }
 
