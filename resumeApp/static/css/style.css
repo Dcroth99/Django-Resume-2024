@@ -342,12 +342,36 @@ footer {
 }
    
 
-.about-me-section p {
-    font-weight: 400;
-    line-height: 1.6;
+.about-me-section {
     font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
 }
 
+.about-me-section h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-me-content {
+    display: flex;
+    align-items: flex-start; /* Align items vertically at the top */
+}
+
+.about-me-image2 {
+    max-width: 150px; /* Adjust the size as needed */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 10px; /* Optional: for rounded corners */
+}
+
+.about-me-text {
+    flex: 1; /* Take the remaining space */
+}
+
+.about-me-text p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
 /* Headshot image styling */
 .headshot {
     width: 50%;
