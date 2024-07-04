@@ -5,7 +5,7 @@
 
 {% block content %}
 {% load static %}
-    <section class="container1"> <!-- Ensure the first section is visible initially -->
+    <section class="container1"> 
         <section>
             <h2>About Me</h2>
             <p>I am a proficient Full-Stack Developer with extensive experience across multiple programming languages and technologies. My expertise lies in crafting robust web applications. Outside of work, I enjoy surfing and hiking. Originally from San Diego, California, I graduated from the University of Hawai'i.</p>
@@ -84,30 +84,30 @@
     </section>
 
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const sections = document.querySelectorAll('.container1');
-    
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1 // Adjusted to 10% visibility
-        };
-    
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.container1');
+        
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+        
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+        
+            sections.forEach(section => {
+                observer.observe(section);
             });
-        }, observerOptions);
-    
-        sections.forEach(section => {
-            observer.observe(section);
         });
-    });
-    </script>
-    
+        </script>
     
     
 {% endblock %}
