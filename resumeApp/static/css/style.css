@@ -341,7 +341,11 @@ footer {
 }
    
 
-
+.about-me-section p {
+    font-weight: 400;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+}
 
 /* Headshot image styling */
 .headshot {
