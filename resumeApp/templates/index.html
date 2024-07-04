@@ -89,10 +89,21 @@
     document.addEventListener('DOMContentLoaded', () => {
         const sections = document.querySelectorAll('.container1');
         let currentSectionIndex = 0;
+        let isThrottled = false;
+        const throttleDuration = 800; // Adjust the duration for smoother transition
     
         sections[currentSectionIndex].classList.add('visible');
     
-        document.addEventListener('wheel', (event) => {
+        const throttle = (callback, delay) => {
+            if (isThrottled) return;
+            isThrottled = true;
+            callback();
+            setTimeout(() => {
+                isThrottled = false;
+            }, delay);
+        };
+    
+        const scrollHandler = (event) => {
             if (event.deltaY > 0) {
                 // Scroll down
                 if (currentSectionIndex < sections.length - 1) {
@@ -108,6 +119,10 @@
                     sections[currentSectionIndex].classList.add('visible');
                 }
             }
+        };
+    
+        document.addEventListener('wheel', (event) => {
+            throttle(() => scrollHandler(event), throttleDuration);
         });
     });
     </script>
