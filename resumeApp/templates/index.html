@@ -89,6 +89,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         const sections = document.querySelectorAll('.container1');
         let currentSectionIndex = 0;
+        let isScrolling = false;
     
         sections[currentSectionIndex].classList.add('visible');
     
@@ -98,10 +99,7 @@
             threshold: 0.5 // Adjusted to 50% visibility
         };
     
-        let isThrottled = false;
-        const throttleDuration = 800; // Adjust the duration for smoother transition
-    
-        const observer = new IntersectionObserver((entries, observer) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
@@ -115,35 +113,34 @@
             observer.observe(section);
         });
     
-        const throttle = (callback, delay) => {
-            if (isThrottled) return;
-            isThrottled = true;
-            callback();
+        const scrollHandler = (event) => {
+            if (isScrolling) return;
+            isScrolling = true;
+    
             setTimeout(() => {
-                isThrottled = false;
-            }, delay);
+                isScrolling = false;
+            }, 600); // Duration must match the CSS transition duration
+    
+            if (event.deltaY > 0) {
+                // Scroll down
+                if (currentSectionIndex < sections.length - 1) {
+                    sections[currentSectionIndex].classList.remove('visible');
+                    currentSectionIndex++;
+                    sections[currentSectionIndex].classList.add('visible');
+                }
+            } else {
+                // Scroll up
+                if (currentSectionIndex > 0) {
+                    sections[currentSectionIndex].classList.remove('visible');
+                    currentSectionIndex--;
+                    sections[currentSectionIndex].classList.add('visible');
+                }
+            }
         };
     
-        document.addEventListener('wheel', (event) => {
-            throttle(() => {
-                if (event.deltaY > 0) {
-                    // Scroll down
-                    if (currentSectionIndex < sections.length - 1) {
-                        sections[currentSectionIndex].classList.remove('visible');
-                        currentSectionIndex++;
-                        sections[currentSectionIndex].classList.add('visible');
-                    }
-                } else {
-                    // Scroll up
-                    if (currentSectionIndex > 0) {
-                        sections[currentSectionIndex].classList.remove('visible');
-                        currentSectionIndex--;
-                        sections[currentSectionIndex].classList.add('visible');
-                    }
-                }
-            }, throttleDuration);
-        });
+        document.addEventListener('wheel', scrollHandler);
     });
     </script>
+    
     
 {% endblock %}
