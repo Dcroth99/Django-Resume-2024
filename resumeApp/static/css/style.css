@@ -361,7 +361,8 @@ footer {
 }
 
 .about-me-image2 {
-    max-width: 200px; /* Adjust the size as needed */
+    width: 450px; /* Adjust the size as needed */
+    height: 720px;
     border-radius: 10px; /* Optional: for rounded corners */
 }
 
