@@ -364,6 +364,24 @@ footer {
     font-size: 25px;
 }
 
+/* Responsive images */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(74, 71, 71, 0.1);
+    border: 1px solid #90a5ba;
+}
+
+/* Additional adjustments for smaller screens */
+@media (max-width: 768px) {
+    .pygame, .certificated {
+        width: 100%;
+    }
+}
+
+
 /* Media Queries for Responsive Design */
 @media (max-width: 1200px) {
     .container, .container1 {
