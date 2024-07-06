@@ -10,8 +10,51 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
-<section class="container">
+
+<section class="container1">
+
     <section>
-        <img src="{% static 'images/Danielcrothresume.jpg' %}" alt="Cerificate">
+
+        <h1>Resume</h1>
+
+    
+
+
+        <section class="certs">
+
+            <div class="certificate">
+
+                <img src="{% static 'images/Danielcrothresume.jpg' %}" alt="Database Cerificate">
+
+        
+            </div>
+
+        </section>
     </section>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('.container1');
+    
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+    
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+    
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+    </script>
+{% endblock %}
