@@ -26,42 +26,35 @@ body {
 /* Container styling */
 .container {
     max-width: 1200px;
-    width: 1000px;
-    margin: 0 auto;
+    width: 90%;
+    margin: 20px auto;
     padding: 20px;
     background-color: rgb(42, 42, 42);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-    margin-bottom: 40px;
-    
 }
 
 .container1 {
-    max-width: 1400px; /* Increase the maximum width */
-    width: 90%; /* Use a percentage for responsiveness */
-    margin: 0 auto;
+    max-width: 1400px;
+    width: 90%;
+    margin: 150px auto;
     padding: 20px;
     background-color: rgb(42, 42, 42);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 150px; /* Increase top margin for more space */
-    margin-bottom: 150px; /* Increase bottom margin for more space */
-    opacity: 0; /* Initially hidden */
-    transform: translateY(50px); /* Initial position */
-    transition: opacity 2.5s ease-out, transform 2.5s ease-out; /* Smooth transition */
-    display: block; /* Ensure display is set to block */
-    font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2.5s ease-out, transform 2.5s ease-out;
 }
 
 .container1.visible {
-    opacity: 1; /* Make visible */
-    transform: translateY(0); /* Move to final position */
-    display: block; /* Show the section when it becomes visible */
+    opacity: 1;
+    transform: translateY(0);
 }
 
-
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 /* Header styling */
 .header {
     width: 100%;
@@ -84,33 +77,24 @@ body {
     margin: 0;
 }
 
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 h1 {
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
+    color: #000;
+    background-color: #fff;
     font-family: monospace;
     font-size: 25px;
-    padding: 10px; /* Adjust padding to your liking */
+    padding: 10px;
     border-radius: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px 0;
     text-align: center;
-    background-size: contain; /* Ensures the background covers the text */
-    background-origin: content-box; /* Ensures padding is included in sizing */
+    background-size: contain;
+    background-origin: content-box;
 }
+
 h2 {
     font-family: monospace;
     color: #6cbdff;
 }
+
 h3 {
     font-family: monospace;
     color: #6197cd;
@@ -121,35 +105,36 @@ p {
     line-height: 1.6;
     font-size: 20px;
     font-family: serif;
-    color: rgb(255, 255, 255);
+    color: #fff;
 }
 
 /* Section styling */
 section {
-    background-color: #000000;
+    background-color: #000;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px 0;
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 section p {
-    color: rgb(245, 245, 245);
+    color: #f5f5f5;
     line-height: 1.6;
 }
 
-/* navbar styling with hover effects */
+/* Navbar styling with hover effects */
 .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .navbar ul li {
-    margin-left: 20px;
+    margin: 10px;
 }
 
 .navbar ul li a {
@@ -168,8 +153,7 @@ section p {
     background-color: rgb(42, 42, 42);
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px 0;
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -184,16 +168,14 @@ ul {
     list-style-type: disc;
     margin-left: 20px;
     padding: 0;
-    color: rgb(245, 245, 245);
+    color: #f5f5f5;
 }
 
 li {
-    margin-bottom: 5px;
-    margin: 0 auto;
-    margin-top: 5px;
+    margin: 5px 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    color: rgb(245, 245, 245);
+    color: #f5f5f5;
 }
 
 /* Contact info styling */
@@ -211,11 +193,11 @@ li {
     text-decoration: underline;
 }
 
-
 .contact-info h3 {
     font-size: 24px;
     margin-bottom: 10px;
 }
+
 /* Anchor link styling */
 a {
     color: #9d9fa3;
@@ -223,7 +205,7 @@ a {
 }
 
 a:hover {
-    text-decoration:aqua;
+    text-decoration: aqua;
 }
 
 /* Footer styling */
@@ -239,9 +221,8 @@ footer {
 .about-me-images {
     display: flex;
     gap: 10px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    margin: 0 auto;
+    margin: 15px 0;
+    justify-content: center;
 }
 
 .about-me-images img {
@@ -249,8 +230,6 @@ footer {
     height: 250px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(74, 71, 71, 0.1);
-    margin-bottom: 20px;
-    margin: 0 auto;
     border: 1px solid #90a5ba;
 }
 
@@ -258,9 +237,8 @@ footer {
 .certificate, .certificate2, .certificate3 {
     display: flex;
     gap: 10px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    margin: 0 auto;
+    margin: 40px 0;
+    justify-content: center;
 }
 
 .certificate img, .certificate2 img, .certificate3 img {
@@ -268,33 +246,20 @@ footer {
     max-width: 800px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(74, 71, 71, 0.1);
-    margin-bottom: 20px;
-    margin: 0 auto;
     border: 1px solid #90a5ba;
-}
-.certificated {
-    display: flex;
-    gap: 10px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    margin: 0 auto;
 }
 
 .certificated img {
-
-        width: 900px;
-        height: 600px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(74, 71, 71, 0.1);
-        margin-bottom: 20px;
-        margin: 0 auto;
-        border: 1px solid #90a5ba;
-    
+    width: 900px;
+    height: 600px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(74, 71, 71, 0.1);
+    border: 1px solid #90a5ba;
 }
 
 .about-me-section {
     font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
+    color: #fff;
     font-size: 18px;
     padding: 20px;
 }
@@ -307,38 +272,35 @@ footer {
 
 .about-me-content {
     display: flex;
-    align-items: flex-start; /* Align items vertically at the top */
-    gap: 20px; /* Space between image and text */
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .about-me-image2 {
-    max-width: 250px; /* Adjust the size as needed */
-    border-radius: 10px; /* Optional: for rounded corners */
+    max-width: 250px;
+    border-radius: 10px;
 }
 
 .about-me-text {
-    flex: 1; /* Take the remaining space */
+    flex: 1;
 }
 
 .about-me-text p {
     margin-bottom: 20px;
     line-height: 1.6;
-    text-align: justify; /* Justify the text for a cleaner look */
-    font-size: 25px;
+    text-align: justify;
+    font-size: 32px;
 }
-
 
 /* Headshot image styling */
 .headshot {
     width: 50%;
-    margin-top: 20px;
-    margin-left: 130px;
-
+    margin: 20px auto;
 }
 
 /* LinkedIn link styling */
 .linkedin {
-    color: rgb(189, 185, 185);
+    color: #bdb9b9;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -346,57 +308,37 @@ footer {
 /* Certificate title styling */
 .cert-title {
     margin: 0 auto;
-    margin-left: 300px;
+    text-align: center;
 }
 
-/* display clock */
+/* Display clock */
 .clock {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 75px;
-    color: aqua;
-    letter-spacing: 5px;
-    border: 2px solid white;
-    background-color: black;
-    padding: 20px fixed;
-    margin-top: 20px; /* Adjust margin to create space between clock and nav */
-}
-
-
-/* clock */
-
-.clock {
-    font-size: 40px; /* Larger font size for visibility */
-    color: rgb(106, 188, 188);
-    letter-spacing: 2px; /* Slight spacing between letters */
+    font-size: 40px;
+    color: #6abcac;
+    letter-spacing: 2px;
     background-color: black;
     padding: 20px;
-    border-radius: 10px; /* Rounded corners for aesthetic */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    text-align: center;
 }
 
+/* Pygame section styling */
 .pygame {
     display: flex;
     gap: 10px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    margin: 0 auto;
+    margin: 40px auto;
+    align-items: center;
 }
 
-.pygame img{
+.pygame img {
     width: 50%;
     max-width: 800px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(74, 71, 71, 0.1);
-    margin-bottom: 20px;
-    margin: 0 auto;
     border: 1px solid #90a5ba;
 }
-
-
 
 .certificate-container {
     display: flex;
@@ -410,22 +352,101 @@ footer {
     margin-bottom: 10px;
 }
 
-.certshome {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; /* Adjust to wrap the content for smaller screens */
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .container, .container1 {
+        width: 95%;
+    }
 }
 
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.certificate-container h3 {
-    font-size: 24px; /* Set the font size for the titles */
-    margin-bottom: 10px; /* Add space below the titles */
-    color: #ffffff; /* Set the text color */
-    text-align: center; /* Center align the text */
+    h1 {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    p, li {
+        font-size: 16px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .about-me-images {
+        flex-direction: column;
+    }
+
+    .about-me-images img, .pygame img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .about-me-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me-text p {
+        font-size: 18px;
+    }
+
+    .headshot {
+        width: 80%;
+    }
+
+    .clock {
+        font-size: 30px;
+    }
+
+    .certificate, .certificate2, .certificate3 {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.certificate-container img {
-    display: block;
-    width: 300px; /* Adjust width as needed */
-    height: 450px; /* Ensure consistent height */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p, li {
+        font-size: 14px;
+    }
+
+    .header-content {
+        padding: 10px;
+    }
+
+    .container, .container1 {
+        padding: 10px;
+    }
+
+    .cert-title {
+        font-size: 20px;
+    }
+
+    .clock {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .certificate-container h3 {
+        font-size: 18px;
+    }
 }
