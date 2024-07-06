@@ -75,9 +75,11 @@ body {
 
 .header h1, .header h3 {
     margin: 0;
-    background-color: none;
+    background-color: transparent;
     
+
 }
+
 
 h1 {
     color: #000;
