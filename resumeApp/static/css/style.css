@@ -360,6 +360,10 @@ footer {
     color: #6cbdff;
 }
 
+.skillsul {
+    font-size: 25px;
+}
+
 /* Media Queries for Responsive Design */
 @media (max-width: 1200px) {
     .container, .container1 {
