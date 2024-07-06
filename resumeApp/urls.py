@@ -7,4 +7,5 @@ urlpatterns = [
     path('pygame', views.tilegame),
     path('certs', views.certificates),
     path('waves', views.waves, name='wavesocial'),
+    path('resume', views.resume, name='resume')
 ]

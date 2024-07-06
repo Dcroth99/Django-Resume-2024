@@ -31,3 +31,6 @@ def certificates(request):
 
 def waves(request):
     return render(request, 'wavesocial.html')
+
+def resume(request):
+    return render(request, 'resume.html')
