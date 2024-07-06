@@ -75,6 +75,8 @@ body {
 
 .header h1, .header h3 {
     margin: 0;
+    background-color: none;
+    
 }
 
 h1 {
