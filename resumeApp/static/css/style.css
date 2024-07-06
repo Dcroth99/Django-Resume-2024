@@ -356,6 +356,10 @@ footer {
     margin-bottom: 10px;
 }
 
+.highlight {
+    color: #6cbdff;
+}
+
 /* Media Queries for Responsive Design */
 @media (max-width: 1200px) {
     .container, .container1 {
