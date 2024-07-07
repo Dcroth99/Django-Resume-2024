@@ -34,3 +34,6 @@ def waves(request):
 
 def resume(request):
     return render(request, 'resume.html')
+
+def portfolio(request):
+    return render(request, 'portfolio.html')
